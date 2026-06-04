@@ -1,0 +1,59 @@
+/* Importar una fuente moderna tipo 'Inter' */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+    --bg-body: #0d1117;
+    --bg-card: #161b22;
+    --text-main: #c9d1d9;
+    --text-bold: #f0f6fc;
+    --accent: #58a6ff; /* Un azul tipo GitHub */
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.intro-box {
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--bg-card);
+    border: 1px solid #30363d;
+    border-radius: 16px; /* Bordes más redondeados = look más moderno */
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para profundidad */
+}
+
+h1 {
+    color: var(--text-bold);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.quote {
+    font-style: italic;
+    color: #8b949e;
+    margin-bottom: 2rem;
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+}
+
+.contact-info a {
+    color: var(--accent);
+    text-decoration: none;
+}
