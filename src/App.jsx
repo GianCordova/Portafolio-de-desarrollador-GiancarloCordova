@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Inicio from './pages/Inicio';
 import SobreMi from './pages/SobreMi';
+import Portafolio from './pages/Portafolio';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/about" element={<SobreMi />} />
-            {/* Agrega aquí tus nuevas rutas */}
+            <Route path="/portafolio" element={<Portafolio />} />
           </Routes>
         </main>
       </div>
