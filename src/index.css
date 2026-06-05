@@ -14,12 +14,9 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
 }
-
+*
 .intro-box {
     text-align: center;
     padding: 4rem;
@@ -119,8 +116,9 @@ h1 {
 }
 
 .app-container {
-  display: flex;
-  min-height: 100vh;
+    display: flex;
+    min-height: 100vh;
+    width: 100%; 
 }
 
 .content {
@@ -130,11 +128,39 @@ h1 {
 }
 
 .sidebar {
-  width: 250px;
-  background-color: #161b22;
-  border-right: 1px solid #30363d;
-  padding: 2rem;
-  height: 100vh;
-  position: sticky;
-  top: 0;
+    width: 250px;
+    background-color: #161b22;
+    height: 100vh;
+    padding-top: 2rem;
+    border-right: 1px solid #30363d;
+    position: sticky; 
+    top: 0;
+}
+
+.sidebar-title {
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.menu-item {
+  display: block;
+  padding: 1rem 2rem;
+  color: #c9d1d9;
+  text-decoration: none;
+  border-left: 4px solid transparent; 
+  transition: all 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #21262d;
+  color: white;
+}
+
+
+.menu-item.active {
+  background-color: #1f242c;
+  border-left: 4px solid #f85149; 
+  color: white;
+  font-weight: bold;
 }
