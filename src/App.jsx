@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import SobreMi from './pages/SobreMi';
 import Portafolio from './pages/Portafolio';
 import Contacto from './pages/Contacto';
+import Educacion from './pages/Educacion';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<SobreMi />} />
             <Route path="/about" element={<SobreMi />} />
             <Route path="/portafolio" element={<Portafolio />} />
+            <Route path="/educacion" element={<Educacion />} />
             <Route path="/contacto" element={<Contacto />} />
           </Routes>
         </main>

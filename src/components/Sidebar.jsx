@@ -13,6 +13,9 @@ const Sidebar = () => {
         <Link to="/portafolio" className={`menu-item ${location.pathname === '/portafolio' ? 'active' : ''}`}>
           Portafolio
         </Link>
+        <Link to="/educacion" className={`menu-item ${location.pathname === '/educacion' ? 'active' : ''}`}>
+          Educación
+        </Link>
         <Link to="/contacto" className={`menu-item ${location.pathname === '/contacto' ? 'active' : ''}`}>
           Contacto
         </Link>
