@@ -5,12 +5,20 @@ const Educacion = () => {
     <main className="container">
       <section className="intro-box-left">
         <h1>Mi camino de aprendizaje</h1>
-        
+
         <EducationItem 
-          title="Licenciatura en Administración Educativa"
+          title="Practicas Supervisadas"
           institucion="Universidad del Istmo"
           date="Ene 2026 - Presente"
           description="Enfoque en gestión institucional, liderazgo educativo y desarrollo curricular."
+          tags={['administración', 'educación', 'liderazgo']}
+        />
+        
+        <EducationItem 
+          title="Desarrollador Jr. Full Stack"
+          institucion="Fundacion Kinal"
+          date="Ene 2026 - Presente"
+          description="Formación principiante como desarrollador full stack con enfoque en backend .NET, programación C# o gestion de DBs con SQL."
           tags={['administración', 'educación', 'liderazgo']}
         />
 
@@ -18,8 +26,8 @@ const Educacion = () => {
           title="Fundamentos de Programación"
           institucion="Fundación Kinal"
           date="Ene 2025 - Oct 2025"
-          description="La bienvenida a los fundamentos de programación como parte de la transición a software."
-          tags={['PSeInt', 'SQL', 'Introduccion a la programacion']}
+          description="Aprendizaje de fundamentos de programación cubriendo las areas de la logica, flujos de control, estructura y la resolucion de problemas."
+          tags={['Springboot', 'SQL', 'Apache NetBeans', 'Fundamentos claves']}
         />
 
         <EducationItem 
