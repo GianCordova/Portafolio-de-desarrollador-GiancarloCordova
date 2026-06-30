@@ -122,3 +122,29 @@ a {
 a:hover {
   color: var(--white);
 }
+
+/* Animación para las barras */
+.progress-fill {
+  width: 0; /* Empieza en 0 */
+  animation: fillBar 1.5s ease-out forwards; /* Duración de 1.5s */
+}
+
+@keyframes fillBar {
+  to {
+    width: var(--width); /* Llega al ancho definido en el componente */
+  }
+}
+
+/* Mejora el diseño de la tarjeta para que luzca más "gráfica" */
+.skill-card {
+  background-color: #0d1117;
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #30363d;
+  transition: transform 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brown-red);
+}
