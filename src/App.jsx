@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Inicio from './pages/Inicio';
 import Sidebar from './components/Sidebar';
 import SobreMi from './pages/SobreMi';
 import Portafolio from './pages/Portafolio';
@@ -13,7 +14,7 @@ function App() {
         <Sidebar />
         <main className="content">
           <Routes>
-            <Route path="/" element={<SobreMi />} />
+            <Route path="/" element={<Inicio />} />
             <Route path="/about" element={<SobreMi />} />
             <Route path="/portafolio" element={<Portafolio />} />
             <Route path="/educacion" element={<Educacion />} />
