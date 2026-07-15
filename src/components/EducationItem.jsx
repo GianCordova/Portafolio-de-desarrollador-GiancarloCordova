@@ -1,30 +1,25 @@
-const EducationItem = ({ title, institucion, date, description, tags }) => {
+const EducationItem = ({ 
+  title, 
+  institucion, 
+  date, 
+  description, 
+  tags,
+  highlight // Para destacar el item más importante
+}) => {
   return (
-    <div className="edu-card" style={{ 
-      borderLeft: '4px solid var(--brown-red)', 
-      paddingLeft: '1rem', 
-      marginBottom: '2rem' 
-    }}>
-      <h3 style={{ color: 'var(--white)' }}>{title}</h3>
+    <div className={`edu-item ${highlight ? 'highlighted' : ''}`}>
+      <div className="edu-header">
+        <h3 className="edu-title">{title}</h3>
+        <span className="edu-date">{date}</span>
+      </div>
       
-      <p style={{ color: 'var(--ash-grey)', fontWeight: 'bold' }}>
-        {institucion} | {date}
-      </p>
+      <p className="edu-institucion">{institucion}</p>
       
-      <p style={{ marginTop: '0.5rem', color: 'var(--white)' }}>
-        {description}
-      </p>
+      <p className="edu-description">{description}</p>
       
-      <div style={{ marginTop: '0.5rem' }}>
+      <div className="edu-tags">
         {tags.map((tag, index) => (
-          <span key={index} style={{ 
-            background: 'var(--brown-red)', 
-            color: 'var(--white)', 
-            padding: '2px 8px', 
-            borderRadius: '4px', 
-            marginRight: '5px',
-            fontSize: '0.8rem' 
-          }}>
+          <span key={index} className="edu-tag">
             {tag}
           </span>
         ))}
