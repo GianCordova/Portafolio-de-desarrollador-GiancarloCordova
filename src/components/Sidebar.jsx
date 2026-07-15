@@ -11,15 +11,12 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Hamburger Button (solo en mobile) */}
       <button className="hamburger-btn" onClick={toggleSidebar}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 
-      {/* Overlay (cuando el sidebar está abierto) */}
       {isOpen && <div className="sidebar-overlay" onClick={closeSidebar}></div>}
 
-      {/* Sidebar */}
       <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
         <h2 className="sidebar-title">Giancarlo C.</h2>
         
@@ -46,6 +43,14 @@ const Sidebar = () => {
             onClick={closeSidebar}
           >
             Portafolio
+          </Link>
+
+          <Link 
+            to="/galeria" 
+            className={`menu-item ${location.pathname === '/galeria' ? 'active' : ''}`}
+            onClick={closeSidebar}
+          >
+            Galería
           </Link>
           
           <Link 
