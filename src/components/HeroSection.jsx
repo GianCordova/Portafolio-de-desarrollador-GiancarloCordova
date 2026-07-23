@@ -34,7 +34,7 @@ const HeroSection = () => {
 
       <div className="hero-stats">
         <div className="stat">
-          <h3>3+</h3>
+          <h3>7+</h3>
           <p>Proyectos</p>
         </div>
         <div className="stat">

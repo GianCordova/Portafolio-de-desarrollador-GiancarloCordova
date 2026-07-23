@@ -176,12 +176,16 @@ a:hover {
 /* Imagen del Proyecto */
 .proyecto-image {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 1.5rem;
   border: 1px solid #30363d;
   transition: transform 0.3s;
+  background-color: #0d1117;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .proyecto-card:hover .proyecto-image {
@@ -1573,5 +1577,189 @@ a:hover {
 
   .gallery-title {
     font-size: 1rem;
+  }
+}
+
+/* ========== GALERÍA CON CARRUSEL ========== */
+
+.projects-gallery {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.gallery-project {
+  margin-bottom: 2rem;
+}
+
+.gallery-project .section-subtitle {
+  margin-bottom: 1.5rem;
+}
+
+/* Carrusel */
+.gallery-carousel {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #0d1117;
+  aspect-ratio: 16/9;
+  border: 1px solid #30363d;
+}
+
+.gallery-carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  display: block;
+  background-color: #0d1117;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Botones del Carrusel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(162, 44, 41, 0.85);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-btn:hover {
+  background-color: var(--accent);
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 6px 16px rgba(162, 44, 41, 0.4);
+}
+
+.carousel-btn.prev {
+  left: 15px;
+}
+
+.carousel-btn.next {
+  right: 15px;
+}
+
+/* Indicador de Puntos */
+.carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.15);
+}
+
+.dot.active {
+  background-color: var(--accent);
+  width: 28px;
+  border-radius: 5px;
+  border-color: var(--accent);
+}
+
+/* Contador */
+.image-counter {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery-carousel {
+    aspect-ratio: 4/3;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .carousel-dots {
+    bottom: 8px;
+    gap: 6px;
+    padding: 4px 10px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dot.active {
+    width: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-carousel {
+    aspect-ratio: 3/2;
+  }
+
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .carousel-dots {
+    bottom: 6px;
+    gap: 4px;
+    padding: 3px 8px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .dot.active {
+    width: 18px;
+  }
+
+  .image-counter {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
   }
 }
